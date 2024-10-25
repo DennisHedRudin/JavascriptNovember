@@ -1,0 +1,60 @@
+:root {
+  --color-default: #6366F1;
+  --color-dark: #0B0F19;
+  --color-primary: #6366F1;
+  --color-gray1: #F3F6FF;
+  --color-gray2: #EFF2FC;
+  --color-gray3: #E2E5F1;
+  --color-gray4: #D4D7E5;
+  --color-gray5: #B4B7C9;
+  --color-gray6: #9397AD;
+  --color-gray7: #565973;
+  --color-gray8: #33354D;
+  --color-gradient: linear-gradient(360deg, rgba(99, 102, 241, 0.1) 0%, rgb(218, 70, 239, 0.05) 42%, rgb(241, 244, 253, 0.07) 83%);
+  --color-white: #FFFFFF;
+  --container-padding: 1rem;
+  --transition-time: all 0,2s;
+  --clr-bg: #fff;
+  --clr-bg-100: var(--color-gray1);
+  --clr-text-body: var(--color-gray7);
+  --clr-text-heading: var(--color-gray8);
+  --clr-text-navigation: var(var(--color-gray7));
+  --bg-head:var(--color-white);
+  --clr-btn-discover: var(--color-white);
+  --clr-client: var(--color-gray2);
+  --bg-client: var(--color-gray1);
+  --white-to-gray: var(--color-white);
+  --border-contact: var(--color-gray2);
+  --bg-partner: rgba(255, 255, 255, 0.15);
+  --bg-q: #fff;
+}
+
+:root.dark {
+  --color-dark: #FFFFFF;
+  --color-primary: #6366F1;
+  --color-gray8: #F3F6FF;
+  --color-gray7: #EFF2FC;
+  --color-gray6: #E2E5F1;
+  --color-gray5: #D4D7E5;
+  --color-gray4: #B4B7C9;
+  --color-gray3: #9397AD;
+  --color-gray2: #565973;
+  --color-gray1: #33354D;
+  --color-gradient: linear-gradient(360deg, rgba(99, 102, 241, 0.1) 0%, rgb(218, 70, 239, 0.05) 42%, rgb(241, 244, 253, 0.07) 83%);
+  --color-white: #0B0F19;
+  --container-padding: 1rem;
+  --transition-time: all 0,2s;
+  --clr-bg: #0B0F19;
+  --clr-bg-100: rgba(255, 255, 255, 0.04);
+  --clr-text-body: var(--color-gray7);
+  --clr-text-heading: var(--color-gray8);
+  --clr-text-navigation: var(--color-gray7);
+  --bg-head:var(--color-white);
+  --white-to-gray: rgba(255, 255, 255, 0.05);
+  --clr-btn-discover: var(--color-gray2);
+  --clr-client: var(--color-gray2);
+  --bg-client: var(--color-gray1);
+  --bg-partner: rgba(255, 255, 255, 0.15);
+  --border-contact: rgba(255, 255, 255, 0.15);
+  --bg-q: rgba(255, 255, 255, 0.04);
+}
