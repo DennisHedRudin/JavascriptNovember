@@ -2,7 +2,7 @@ import React from 'react'
 
 function Faq() {
   return (
-    <>
+    
     <div id="FAQ" className="container">
                 <div className="info">
                     
@@ -200,7 +200,7 @@ function Faq() {
     </div>
             
         
-    </>
+    
   )
 }
 

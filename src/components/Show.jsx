@@ -2,7 +2,7 @@ import React from 'react'
 
 function Show() {
   return (
-    <>
+
     <div id="show" className="container">
                 
             <div className="banking">
@@ -26,7 +26,7 @@ function Show() {
                     <img src="/src/Image/Graf.svg" alt="Grapf"/>
                 </div>
     </div>
-    </>
+    
   )
 }
 

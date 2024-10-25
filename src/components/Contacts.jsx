@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contacts() {
   return (
-    <>
+    
      <div id="contacts" className="container">
                 <img src="/src/Image/Friends.svg" alt="Contacts"/>
                 <div className="Receive">
@@ -29,8 +29,8 @@ function Contacts() {
                     
                 </div>
                 
-            </div>
-    </>
+    </div>
+    
   )
 }
 
