@@ -6,11 +6,11 @@ function Show() {
     <div id="show" className="container">
                 
             <div className="banking">
-                    <h2>Make your money trasfer<br/> simple and clean</h2>
+                    <h2>Make your money transfer<br/> simple and clean</h2>
                     <ul>
-                        <li><img src="/src/Image/icon/bx-check-circle.svg" alt="checkbox"/>Banking transavtions are free fot you</li>
+                        <li><img src="/src/Image/icon/bx-check-circle.svg" alt="checkbox"/>Banking transactions are free for you</li>
                         <li><img src="/src/Image/icon/bx-check-circle.svg" alt="checkbox"/>No monthly cash commission</li>
-                        <li><img src="/src/Image/icon/bx-check-circle.svg" alt="checkbox"/>manage payments and transactions online</li>
+                        <li><img src="/src/Image/icon/bx-check-circle.svg" alt="checkbox"/>Manage payments and transactions online</li>
                     </ul>
 
                         <div className="learn-btn">

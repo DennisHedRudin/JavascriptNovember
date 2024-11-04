@@ -1,38 +1,35 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './assets/css/main.css'
+import './assets/css/contact.css'
 import './assets/css/theme.css'
-import Clients from './components/Clients'
-import Contacts from './components/Contacts'
-import Faq from './components/Faq'
-import Features from './components/Features'
+import Home from './views/Home'
+import Contact from './views/Contact'
+import Feature from './views/Feature'
+import Faqs from './views/Faqs'
+
+
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import How from './components/How'
-import Partners from './components/Partners'
-import Show from './components/Show'
-import Subscribe from './components/Subscribe'
 
 
 function App() {
   
+
   return (
-    <>
-    <body className='main-body'> 
-     <Header /> 
-     <main>
-      <Hero />
-      <Partners />
-      <Features />
-      <How />
-      <Show />
-      <Contacts />
-      <Clients />
-      <Faq />
-      <Subscribe />
-     </main>
-     <Footer />
-    </body>
-    </>
+    <BrowserRouter>
+      <body className='main-body'> 
+        <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />          
+              <Route path="/Feature" element={<Feature />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/FAQ" element={<Faqs />} />              
+            </Routes>
+          </main>
+        <Footer />
+      </body>
+    </BrowserRouter>
   )
 }
 
