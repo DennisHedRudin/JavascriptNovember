@@ -159,7 +159,7 @@
       
       position: absolute;
       min-width: 635px;    
-      bottom: -720px;
+      bottom: -670px;
       left: 220px;
     }
   }
@@ -179,7 +179,14 @@
       width: 100%;
       padding: 1rem;
       border-radius: .5rem;
-      border: 1px solid var(--color-gray4);
+      border: 1px solid var(--color-gray4);      
+    
+    }
+
+    .specialist {
+      background-image: url("/src/Image/Vector2.svg");
+      background-repeat: no-repeat;
+      background-position: 470px 50%;
     }
 
     .submit {
@@ -189,6 +196,27 @@
       margin-bottom: 1rem;
       box-shadow: 0 5px 10px #6365f169;
 
+    }
+
+    .conf-box {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      background-color: var(--color-white);
+      padding: 3rem;
+      border-radius: 15px;
+      box-shadow: 5px 5px 7px var(--color-gray4);
+
+      @media (min-width: 1400px) {
+      
+        position: absolute;
+        min-width: 635px;    
+        bottom: -300px;
+        left: 220px;
+      }
     }
 
 

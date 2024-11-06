@@ -7,9 +7,52 @@ const  ContactForm = () => {
     const [errors, setErrors] = useState ({})
     const [submitted, setSubmitted] = useState(false);
 
+    const validateField = (name, value) => {
+      let error = ''
+
+      if (name === 'name' && !/^[A-Öa-ö\s\-]{2,}$/.test(value)) {
+        error = "Must be at least 2 characters long, no numbers"
+      } else if (name === 'email' &&!/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(value)) {
+        error = "Must be an valid Email (eg. username@example.com)"
+      } else if (name === 'specialist' && !/^[A-Öa-ö\s\-]{2,}$/.test(value)){
+        error = "Must be at least 2 characters long, no numbers"
+        }
+
+
+      setErrors(prevErrors => ({...prevErrors, [name]: error}))
+    }
+
+
+    const validateForm = () => {
+      const newErrors = {}
+
+      if (!/^[A-Öa-ö\s\-]{2,}$/.test(formData.fullName)) {
+        newErrors.fullName = "Must be at least 2 characters long, no numbers"
+        }
+        
+      if (!/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(formData.email)) {
+        newErrors.email = "Must be an valid Email (eg. username@example.com)"
+        }
+
+        if (!/^[A-Öa-ö\s\-]{2,}$/.test(formData.specialist)) {
+          newErrors.specialist = "Must be at least 2 characters long, no numbers"
+          }
+
+
+        setErrors(newErrors)
+        return Object.keys(newErrors).length === 0;
+    }
+
+
+
+
+
+
+
     const handleChange = (e) => {
       const { name, value} = e.target
       setFormData({...formData, [name]: value})
+      validateField(name, value)
 
       if (value.trim() === '') {
         setErrors(prevErrors => ({...prevErrors, [name]: `${name} field is required`}))
@@ -21,6 +64,7 @@ const  ContactForm = () => {
     const handleOk = () => {
         setSubmitted(false)
     }
+
 
     const handleSubmit = async (e) => {
         e.preventDefault(); 
@@ -37,6 +81,13 @@ const  ContactForm = () => {
             return
         }
 
+        if (validateForm()) {
+          console.log('form valid')
+        } 
+        else {
+          console.log('form Invalid')
+        }
+        
         const res = await axios.post('https://win24-assignment.azurewebsites.net/api/forms/contact', formData)
       
 
@@ -54,9 +105,12 @@ const  ContactForm = () => {
     if (submitted) {
         return (
             <div className="reg-box">
-                <h1>Tack för din ansökan!</h1>
-                <p>Vi återkommer till dig så snart vi kan.</p>
+              <div className="conf-box">
+                <h2>Thank you for contacting us!</h2>
+                <p>We'll come back to you as soon as possible.</p>
                 <button className='btn-primary' onClick={handleOk}>OK</button>
+
+              </div>
 
             </div>
         )
@@ -72,7 +126,7 @@ const  ContactForm = () => {
         <div className="contact-input-group"> 
                <label htmlFor="fullName" className="formLabel">Full Name</label>
                <input type="text" id="fullName" className="contact-form-input" name="fullName" value={formData.fullName} onChange={handleChange} required/>
-               <span className="error">{errors.name && errors.name}</span>                    
+               <span className="error">{errors.fullName && errors.fullName}</span>                    
         </div>
             
         <div className="contact-input-group"> 
@@ -84,7 +138,7 @@ const  ContactForm = () => {
             
         <div className="contact-input-group"> 
             <label htmlFor="Specialist" className="formLabel">Specialist</label>
-            <input type="text" id="specialist" className="contact-form-input" name="specialist" value={formData.specialist} onChange={handleChange} required/>
+            <input type="text" id="specialist" className="contact-form-input specialist" name="specialist" value={formData.specialist} onChange={handleChange} required/>
             <span className="error">{errors.specialist && errors.specialist}</span>                 
 
         </div>

@@ -53,7 +53,7 @@ const Faq =() => {
                 
                 <div id="contact">                       
                            <div className="call">
-                               <img src="/src/Image/icon/call.svg" alt=""/>
+                               <img src="/src/Image/icon/call.svg" alt="" className="icon-image" />
                                <p>Still have questions?</p>
                                <a  href="#" className="contact-call">
                                    <span>Contact us</span>
@@ -61,7 +61,7 @@ const Faq =() => {
                                </a>
                            </div>
                            <div className="message">
-                               <img src="/src/Image/icon/message.svg" alt=""/>
+                               <img src="/src/Image/icon/message.svg" alt="" className="icon-image"/>
                                <p>Dont like phone calls?</p>
                                <a href="#" className="contact-mess">
                                    <span>Contact us</span>

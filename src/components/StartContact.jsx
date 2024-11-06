@@ -21,7 +21,7 @@ import React from 'react'
                                         respond as soon as possible.</p>
                                     <a href="#" className="contact-mess">
                                         <span>Leave a message</span>
-                                        <img src="/src/Image/icon/pil1.svg" alt="User" className="arrow"/>
+                                        <img src="/src/Image/icon/pil1.svg" alt="User" className="arrow-contact"/>
                                     </a>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@ import React from 'react'
                                          maecenas non vestibulum.</p>
                                     <a href="#" className="contact-mess">
                                         <span>Send an application</span>
-                                        <img src="/src/Image/icon/pil1.svg" alt="User" className="arrow"/>
+                                        <img src="/src/Image/icon/pil1.svg" alt="User" className="arrow-contact"/>
                                     </a>
                                 </div>
                                     

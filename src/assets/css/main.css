@@ -52,7 +52,7 @@ body .main-body {
 .dark .dark-vector {
   display: block;
 }
-.dark .qa, .dark .qa1, .dark .qa2, .dark .answer {
+.dark .qa, .dark .answr {
   box-shadow: none;
 }
 .dark #logo {
@@ -125,7 +125,7 @@ h6 {
 }
 
 .header {
-  background-color: var(--bg-head);
+  background-color: var(--color-gradient);
 }
 
 .nav-link {
@@ -175,6 +175,7 @@ h6 {
   border: none;
   padding-top: 0.2rem;
   margin-left: 1.5rem;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .btn-mobile {
@@ -741,9 +742,8 @@ h2 {
   margin-bottom: 2rem;
 }
 
-.arrow {
-  width: 12px;
-  height: 12px;
+.arrow {  
+  height: 20px;
 }
 
 #clients {
@@ -811,6 +811,10 @@ h2 {
   gap: 1.5rem;
 }
 
+.rating {
+  margin-bottom: 1rem;
+}
+
 #FAQ {
   display: flex;
   flex-direction: column;
@@ -875,7 +879,7 @@ h2 {
   width: 100%;
   grid-area: contact;
 }
-#contact img {
+#contact .icon-image {
   width: 28px;
   height: 28px;
 }
@@ -913,19 +917,18 @@ h2 {
 
 
 .answr {  
-  text-align: left;
-  font-size: 14px;
+  text-align: left;  
   color: var(--color-gray7);
   border: solid;
   border-top: none;
   border-color: var(--color-gray2);
   background-color: var(--bg-q);
   
+  
   display: grid;
   grid-template-rows: 0fr;
-  overflow: hidden;
-  
-  transition: grid-template-rows 300ms, padding 300ms;
+  overflow: hidden;  
+ 
 }
 
 @media (min-width: 768px) {
@@ -937,26 +940,18 @@ h2 {
   .answr {
     box-shadow: 2px 4px 10px var(--color-gray2);
     border: none;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
   }
+}
+
+.open .qa{
+border-radius:10px 10px 0 0 ;
+border-bottom: solid 1px var(--color-gray2);
 }
 
 .open .answr {
   grid-template-rows: 1fr;
   padding: 1rem;
-}
-
-
-.btn-discover1 {
-  display: none;
-}
-@media (min-width: 768px) {
-  .btn-discover1 {
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-  }
 }
 
 
@@ -1000,6 +995,7 @@ h2 {
   outline: none !important;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 .btn-answer:hover {
   background-color: var(--color-gray4); 
@@ -1009,7 +1005,6 @@ h2 {
 .btn-answer:hover, .btn-answer:focus, .btn-answer:active {
   outline: none !important;
 }
-
 
 
 
@@ -1122,6 +1117,15 @@ h2 {
   background-image: url("/src/Image/icon/envelope.svg");
   background-repeat: no-repeat;
   background-position: 10px 50%;
+}
+
+.return {
+  margin-left: 4rem;
+  padding: 1rem 3rem;
+}
+
+.return:hover {
+  background-color: var(--color-gray4);
 }
 
 footer {

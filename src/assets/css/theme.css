@@ -18,8 +18,8 @@
   --clr-bg-100: var(--color-gray1);
   --clr-text-body: var(--color-gray7);
   --clr-text-heading: var(--color-gray8);
-  --clr-text-navigation: var(var(--color-gray7));
-  --bg-head:var(--color-white);
+  --clr-text-navigation: var(--color-gray7);
+  --bg-head: var(--color-white);
   --clr-btn-discover: var(--color-white);
   --clr-client: var(--color-gray2);
   --bg-client: var(--color-gray1);
@@ -49,7 +49,7 @@
   --clr-text-body: var(--color-gray7);
   --clr-text-heading: var(--color-gray8);
   --clr-text-navigation: var(--color-gray7);
-  --bg-head:var(--color-white);
+  --bg-head: var(--color-white);
   --white-to-gray: rgba(255, 255, 255, 0.05);
   --clr-btn-discover: var(--color-gray2);
   --clr-client: var(--color-gray2);
