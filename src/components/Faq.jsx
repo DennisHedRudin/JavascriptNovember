@@ -1,26 +1,12 @@
 
-import React, {useState, useEffect} from 'react'
+import React, {useContext} from 'react'
 import Questions from './Questions'
-import axios from 'axios'
+import { QuestionContext } from '../context/QuestionContext'
+
 
 
 const Faq =() => {
-    const [question, setQuestion] = useState([])
-    
-   
-
-    const getDataUsingAxios = async () => {
-        const res = await axios.get('https://win24-assignment.azurewebsites.net/api/faq')
-        console.log(res.data);         
-        setQuestion(res.data)
-    }
-
-
-
-    useEffect(() => {        
-        getDataUsingAxios()
-    },[])
-
+  const { question } = useContext(QuestionContext);
 
   
 

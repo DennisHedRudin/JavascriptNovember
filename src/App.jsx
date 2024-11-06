@@ -6,6 +6,7 @@ import Home from './views/Home'
 import Contact from './views/Contact'
 import Feature from './views/Feature'
 import Faqs from './views/Faqs'
+import QuestionProvider from './context/QuestionContext'
 
 
 import Footer from './components/Footer'
@@ -16,20 +17,22 @@ function App() {
   
 
   return (
-    <BrowserRouter>
-      <body className='main-body'> 
-        <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />          
-              <Route path="/Feature" element={<Feature />} />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/FAQ" element={<Faqs />} />              
-            </Routes>
-          </main>
-        <Footer />
-      </body>
-    </BrowserRouter>
+    <QuestionProvider>
+      <BrowserRouter>
+        <body className='main-body'> 
+          <Header />
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />          
+                <Route path="/Feature" element={<Feature />} />
+                <Route path="/Contact" element={<Contact />} />
+                <Route path="/FAQ" element={<Faqs />} />              
+              </Routes>
+            </main>
+          <Footer />
+        </body>
+      </BrowserRouter>
+    </QuestionProvider>
   )
 }
 

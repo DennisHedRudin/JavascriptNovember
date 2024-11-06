@@ -1,25 +1,12 @@
 .home {
-    background-color: var(--color-gray1);
- 
-    
-    
-    p {
-        color: #9397AD;
-    }
-    
-    a {
-        text-decoration: none;
-        color: var(--color-primary);
-    }
-
-    .container {
-      
-      display: flex;
-      justify-content: left;
-      gap: 1rem;
-    }
+    background-color: var(--color-gray1); 
+          
   }
 
+  .homepage {
+    text-color: var(--color-gray3);
+  }
+  
   
   
   
@@ -318,15 +305,7 @@
   
   
   
-  .breadCrumb {
-    display: flex;
-    gap: 1rem;
-  }
-  .breadCrumb a {
-    color: var(--color-default);
-    text-decoration: none;
-  }
-
+ 
   @media (min-width: 768px) {
     .container {
       max-width: 720px;

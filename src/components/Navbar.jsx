@@ -14,7 +14,7 @@ const Navbar= () => {
     <button className="btn-mobile"  onClick={toggleMenu}>
                 <img src="/src/Image/Button - Toggle navigation.svg" alt="Toggle-nav"/>
     </button>    
-        <div className={`${!ShowMenu ? 'hideNav' : ''}`}>
+        <div className={`${!ShowMenu ? 'hideNav' : 'showNav'}`}>
             <nav className="nav-links">
                 <NavLink className="nav-link" to="/Feature">Features</NavLink>
                 <NavLink className="nav-link" to="/FAQ">FAQ</NavLink>

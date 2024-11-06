@@ -7,13 +7,12 @@ const BreadCrumb = () => {
     const pathnames = location.pathname.split('/').filter((x) => x);
 
   return (
-    <section className="page-title"> 
-        <div className="container">
-            <h1>{pathnames[pathnames.length - 1]?.replace(/-/g,' ') || 'Home'}</h1>
+    <section className="page-title home"> 
+        <div className="container">         
             <ul className="breadCrumb">
 
                 <img src="/src/Image/icon/home.svg" alt="home icon"/>
-                <li><Link to="/">Home</Link></li>
+                <li ><Link to="/" className="homepage">Homepage</Link></li>
                 <img src="/src/Image/icon/arrows.svg" alt="arrows"/>
                 {
                     pathnames.map((value, index) => { 

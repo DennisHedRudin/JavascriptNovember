@@ -1,13 +1,13 @@
 import React from 'react'
-import Home from '../components/Home'
 import StartContact from '../components/StartContact'
 import ContactForm from '../components/ContactForm'
 import Location from '../components/Location'
+import BreadCrumb from '../components/BreadCrumb'
 
 function Contact() {
   return (
     <div>    
-        <Home />
+        <BreadCrumb />
         <section id="start-contact">
              <div className="container">
                 <StartContact />

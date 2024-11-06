@@ -31,13 +31,15 @@ const Questions = ({ question, answer }) => {
                         )}
                     </div> 
 
-                    {isOpen && (
-                    <div className="answr">                        
+                    
+                    <div className="answr">
+                      <div className="expandable">
                            <p>{answer}</p>                   
+                        </div>                        
                                                
-                    </div>     
+                    </div>    
 
-                    )}                        
+                                            
     </div>
   )
 }
