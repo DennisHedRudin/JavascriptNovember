@@ -72,7 +72,7 @@ const  ContactForm = () => {
         const newErrors = {}
         Object.keys(formData).forEach(field=> {
             if (formData[field].trim() === '') {
-                newErrors[field] = `The ${field} field is required`
+                newErrors[field] = `This field is required`
             }
         })
 

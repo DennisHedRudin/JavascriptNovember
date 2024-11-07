@@ -27,6 +27,7 @@
   --border-contact: var(--color-gray2);
   --bg-partner: rgba(255, 255, 255, 0.15);
   --bg-q: #fff;
+  --bg-form: #FFF;
 }
 
 :root.dark {
@@ -57,4 +58,5 @@
   --bg-partner: rgba(255, 255, 255, 0.15);
   --border-contact: rgba(255, 255, 255, 0.15);
   --bg-q: rgba(255, 255, 255, 0.04);
+  --bg-form: #565973;
 }

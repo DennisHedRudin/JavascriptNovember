@@ -1,12 +1,23 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import DarkModeSwitch from './DarkModeSwitch'
 import Navbar from './Navbar'
 
 const Header = () => {
+
+    
+  const location = useLocation();
+
+  const getBackground = () => {
+    switch (location.pathname) {
+      case '/Contact':
+        return { backgroundColor: 'var(--color-gray1)' };
+    }
+  };
+  
   return (
     <>
-    <header className="header">
+    <header className="header"  style={getBackground()}>
         <div className="container">
             
             <Link id="logo" to="/"><img src="/src/Image/Silicon.svg" alt="logga Silicon"/></Link>

@@ -2,6 +2,7 @@
 import React, {useContext} from 'react'
 import Questions from './Questions'
 import { QuestionContext } from '../context/QuestionContext'
+import { Link } from 'react-router-dom';
 
 
 
@@ -33,16 +34,16 @@ const Faq =() => {
                 
                 </div>
 
-                <div className="btn-contact">
+                <Link to="/Contact" className="btn-contact">
                     <button className="btn-primary">Contact us now</button>
-                </div>
+                </Link>
                 
                 <div id="contact">                       
                            <div className="call">
                                <img src="/src/Image/icon/call.svg" alt="" className="icon-image" />
                                <p>Still have questions?</p>
                                <a  href="#" className="contact-call">
-                                   <span>Contact us</span>
+                                   <span className="contact-link">Contact us</span>
                                    <img src="/src/Image/icon/pil1.svg" alt="User" className="arrow"/>
                                </a>
                            </div>
@@ -50,7 +51,7 @@ const Faq =() => {
                                <img src="/src/Image/icon/message.svg" alt="" className="icon-image"/>
                                <p>Dont like phone calls?</p>
                                <a href="#" className="contact-mess">
-                                   <span>Contact us</span>
+                                   <span className="contact-link">Contact us</span>
                                    <img src="/src/Image/icon/pil2.svg" alt="User" className="arrow"/>
                                </a>
                            </div>                                                           

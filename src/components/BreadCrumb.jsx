@@ -6,8 +6,15 @@ const BreadCrumb = () => {
     const location = useLocation();
     const pathnames = location.pathname.split('/').filter((x) => x);
 
+    const getBackground = () => {
+        switch (location.pathname) {
+          case '/Contact':
+            return { backgroundColor: 'var(--color-gray1)' };
+        }
+      };
+
   return (
-    <section className="page-title home"> 
+    <section className="page-title home" style={getBackground()}> 
         <div className="container">         
             <ul className="breadCrumb">
 

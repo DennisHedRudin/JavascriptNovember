@@ -1,10 +1,14 @@
 .home {
-    background-color: var(--color-gray1); 
+    background-color: var(--color-white); 
           
   }
 
+  .dark .home {
+    background-color: #121212;
+  }
+
   .homepage {
-    text-color: var(--color-gray3);
+    font-color: var(--color-gray3);
   }
   
   
@@ -55,8 +59,11 @@
 
     h1 {
       padding-bottom: 2rem;
-
       align-self: center;
+
+      @media (min-width: 1400px) {
+        align-self: flex-start;
+      }
     }
     
 
@@ -120,17 +127,17 @@
   .reg-box {
     position: relative;
     display: none;
-
-
+    
+    
     @media (min-width: 768px) {
       display: flex;
     }
   }
-
+  
   .reg-form {
-
-
-    background-color: #fff;
+    
+    
+    background-color: var(--bg-form);    
     border-radius: 7px;
     box-shadow: 0 0 10px var(--color-gray4);
     padding: 4rem;
@@ -148,6 +155,14 @@
       min-width: 635px;    
       bottom: -670px;
       left: 220px;
+    }
+  }
+
+  .dark .reg-form {
+    box-shadow: none;
+
+    button {
+      box-shadow: none;
     }
   }
   
@@ -212,6 +227,8 @@
       margin-bottom: 22rem;
     }
 
+   
+
     .maps {
       display: none;
       
@@ -265,44 +282,33 @@
       gap: 3rem;
       margin-top: 6rem;
       background-color: var(--color-gray1);
-      box-shadow: 5px 5px 7px var(--color-gray4);
-
+      box-shadow: 5px 5px 7px var(--color-gray4);    
     
-
-      @media (min-width: 1400px) {
-        gap: 1rem;
-        margin-top: 1rem;
-        margin-left: 2.5rem;
-        background-color: #fff;
-        box-shadow: none; 
-        justify-content: flex-start;     
-  
-      }
     }
+
+    .dark .socials {
+      box-shadow: none;
+      background-color: #121212;
+    }
+
     .social-box {
       display: grid;
       place-items: center;
       width: 44px;
       height: 44px;
       background-color: var(--color-gray1);
-      border-radius: 5px;
+      border-radius: 5px;      
+    }
 
+    .dark .social-box {
+      background-color: #fff;
     }
 
     .social-box:hover {
       background-color: var(--color-primary);
     }
 
-  footer .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-  }
-  footer .credit {
-    display: none;
-  }
-  
+
   
   
  
@@ -342,7 +348,16 @@
     .maps {
       display: inline-block;
     }   
-  
+    
+    .socials {      
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-left: 2.5rem;
+      background-color: #fff;
+      box-shadow: none; 
+      justify-content: flex-start;    
+
+    }
 
    
     

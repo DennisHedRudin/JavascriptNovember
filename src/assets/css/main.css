@@ -336,13 +336,14 @@ h6 {
   opacity: 0;
   transform: translateY(-20px);  
   transition: transform 0.5s ease, opacity 0.5s ease;
-  left: 590px;
-  top: -50px;
+  left: 400px;
 
   
   
   @media (min-width: 1400px) {
     display: none;
+    left: 590px;
+    top: -50px;
   }
   
 }
@@ -884,6 +885,7 @@ h2 {
   }
 }
 #FAQ .btn-contact {
+  text-decoration: none;
   border: none;
   margin-top: 4rem;
 }
@@ -903,8 +905,9 @@ h2 {
 #contact {
   display: none;
   width: 100%;
-  grid-area: contact;
+  grid-area: contact;  
 }
+
 #contact .icon-image {
   width: 28px;
   height: 28px;
@@ -1080,6 +1083,14 @@ border-bottom: solid 1px var(--color-gray2);
   align-items: center;
   color: #22C55E;
   gap: 1rem;
+}
+
+.contact-mess:hover {
+ text-decoration: none;
+}
+
+.contact-call:hover {
+ text-decoration: none;
 }
 
 .subscribe {
