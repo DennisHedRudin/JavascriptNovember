@@ -18,19 +18,19 @@ function Hero() {
                                 <div id="app-center">
 
                                     <div id="light-app" className="app-link">                                        
-                                        <a className="btn-app" href="#">
+                                        <a className="btn-app" href="https://www.apple.com/se/app-store/" target="_blank">
                                             <img src="/src/Image/appstore/Group.svg" alt="Appstore"/>
                                         </a>
-                                        <a className="btn-app" href="#">
+                                        <a className="btn-app" href="https://play.google.com/store/apps?hl=sv" target="_blank">
                                             <img src="/src/Image/appstore/Google play.svg" alt="Google play"/>
                                         </a>
                                     </div>
         
                                     <div id="dark-app" className="app-link-dark">
-                                        <a className="btn-app-dark" href="#">
+                                        <a className="btn-app-dark" href="https://www.apple.com/se/app-store/" target="_blank">
                                             <img src="/src/Image/Dark/Group (1).svg" alt="Appstore"/>
                                         </a>
-                                        <a className="btn-app-dark" href="">
+                                        <a className="btn-app-dark" href="https://play.google.com/store/apps?hl=sv" target="_blank">
                                             <img src="/src/Image/Dark/Google dark.svg" alt="googleplay"/>
                                         </a>
         

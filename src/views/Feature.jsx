@@ -4,10 +4,9 @@ import Features from '../components/Features'
 
 function Feature() {
   return (
-    <>
-    
-    <BreadCrumb />
-    <Features />
+    <>    
+      <BreadCrumb />
+      <Features />
     </>
   )
 }

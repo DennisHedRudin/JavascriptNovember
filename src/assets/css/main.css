@@ -333,11 +333,11 @@ h6 {
   opacity: 0;
   transform: translateY(-20px);  
   transition: transform 0.5s ease, opacity 0.5s ease;
-  left: 11rem;
+  left: 100%;
   top: -1rem;
   
   @media (min-width: 768px) {
-    max-width: 720px;
+    
     left: 36rem;
     top: -4rem;
   }
