@@ -185,11 +185,6 @@
     
     }
 
-    .specialist {
-      background-image: url("/src/Image/Vector2.svg");
-      background-repeat: no-repeat;
-      background-position: 470px 50%;
-    }
 
     .submit {
       width: 100%;

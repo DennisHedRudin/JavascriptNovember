@@ -14,9 +14,7 @@ const  ContactForm = () => {
         error = "Must be at least 2 characters long, no numbers"
       } else if (name === 'email' &&!/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(value)) {
         error = "Must be an valid Email (eg. username@example.com)"
-      } else if (name === 'specialist' && !/^[A-Öa-ö\s\-]{2,}$/.test(value)){
-        error = "Must be at least 2 characters long, no numbers"
-        }
+      } 
 
 
       setErrors(prevErrors => ({...prevErrors, [name]: error}))
@@ -34,9 +32,7 @@ const  ContactForm = () => {
         newErrors.email = "Must be an valid Email (eg. username@example.com)"
         }
 
-        if (!/^[A-Öa-ö\s\-]{2,}$/.test(formData.specialist)) {
-          newErrors.specialist = "Must be at least 2 characters long, no numbers"
-          }
+        
 
 
         setErrors(newErrors)
@@ -58,7 +54,7 @@ const  ContactForm = () => {
         setErrors(prevErrors => ({...prevErrors, [name]: `${name} field is required`}))
       } else {
         setErrors(prevErrors => ({...prevErrors, [name]: ''}))
-      }
+      } 
     }
 
     const handleOk = () => {
@@ -137,11 +133,17 @@ const  ContactForm = () => {
         </div>
             
         <div className="contact-input-group"> 
-            <label htmlFor="Specialist" className="formLabel">Specialist</label>
-            <input type="text" id="specialist" className="contact-form-input specialist" name="specialist" value={formData.specialist} onChange={handleChange} required/>
-            <span className="error">{errors.specialist && errors.specialist}</span>                 
+          <label htmlFor="Specialist" className="formLabel" >Specialist</label>
+            <select className="contact-form-input" name="specialist" value={formData.specialist} id="dropdown" onChange={handleChange} required>
+              <option value=""></option>
+              <option value="option1">IT</option>
+              <option value="option2">Economy</option>
+              <option value="option3">Construction</option>
+            </select>
+            <span className="error">{errors.email && errors.email}</span>
+                              
 
-        </div>
+          </div>
 
         <button type="submit" className="btn-primary submit">Make an appointment</button>
 
