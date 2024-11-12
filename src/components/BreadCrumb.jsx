@@ -21,8 +21,7 @@ const BreadCrumb = () => {
                 <img src="/src/Image/icon/home.svg" alt="home icon"/>
                 <li ><Link to="/" className="homepage">Homepage</Link></li>
                 <img src="/src/Image/icon/arrows.svg" alt="arrows"/>
-                {
-                    pathnames.map((value, index) => { 
+                {pathnames.map((value, index) => { 
                         const to = `/${pathnames.slice(0, index + 1).join('/')}`;
 
                         return (

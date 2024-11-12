@@ -15,8 +15,8 @@ function Location() {
                         <ul>
                             <li><img src="/src/Image/icon/place.svg" alt="checkbox" />4517 Washington Ave. Manchester, Kentucky 39495</li>
                             <li className="middle"><img src="/src/Image/icon/Phone.svg" alt="checkbox" />(406) 555-0120</li>
-                            <li><img src="/src/Image/icon/Clock.svg" alt="checkbox" /><span highlight>Mon – Fri:</span> 9:00 am – 22:00 am</li>
-                            <li className="weekend"><span highlight>Sat – Sun:</span> 9:00 am – 20:00 am</li>
+                            <li><img src="/src/Image/icon/Clock.svg" alt="checkbox" /><span className="highlight">Mon – Fri:</span> 9:00 am – 22:00 am</li>
+                            <li className="weekend"><span className="highlight">Sat – Sun:</span> 9:00 am – 20:00 am</li>
                         </ul>
 
                     </div>
@@ -25,8 +25,8 @@ function Location() {
                         <ul>
                             <li><img src="/src/Image/icon/place.svg" alt="checkbox"/>2464 Royal Ln. Mesa,New Jersey 45463</li>
                             <li className="middle"><img src="/src/Image/icon/Phone.svg" alt="checkbox"/>(406) 544-0123</li>
-                            <li><img src="/src/Image/icon/Clock.svg" alt="checkbox"/><span highlight>Mon – Fri:</span> 9:00 am – 22:00 am</li>
-                            <li className="weekend"><span highlight>Sat – Sun:</span> 9:00 am – 20:00 am</li>
+                            <li><img src="/src/Image/icon/Clock.svg" alt="checkbox"/><span className="highlight">Mon – Fri:</span> 9:00 am – 22:00 am</li>
+                            <li className="weekend"><span className="highlight" >Sat – Sun:</span> 9:00 am – 20:00 am</li>
                         </ul>
     
                     </div>

@@ -19,7 +19,7 @@ function App() {
   return (
     <QuestionProvider>
       <BrowserRouter>
-        <body className='main-body'> 
+        <div className='main-body'> 
           <Header />
             <main>
               <Routes>
@@ -30,7 +30,7 @@ function App() {
               </Routes>
             </main>
           <Footer />
-        </body>
+        </div>
       </BrowserRouter>
     </QuestionProvider>
   )
