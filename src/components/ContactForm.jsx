@@ -8,9 +8,9 @@ const  ContactForm = () => {
     const [submitted, setSubmitted] = useState(false);
 
     const validateField = (name, value) => {
-      let error = ''
+      let error = '';
 
-      if (name === 'name' && !/^[A-Öa-ö\s\-]{2,}$/.test(value)) {
+      if (name === 'fullName' && !/^[A-Öa-ö\s\-]{2,}$/.test(value)) {
         error = "Must be at least 2 characters long, no numbers"
       } else if (name === 'email' &&!/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(value)) {
         error = "Must be an valid Email (eg. username@example.com)"
@@ -30,9 +30,11 @@ const  ContactForm = () => {
         
       if (!/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(formData.email)) {
         newErrors.email = "Must be an valid Email (eg. username@example.com)"
-        }
-
+        }  
         
+      if (!formData.specialist) {
+        newErrors.specialist = 'Please select a specialist';
+      }
 
 
         setErrors(newErrors)
@@ -66,9 +68,9 @@ const  ContactForm = () => {
         e.preventDefault(); 
        
         const newErrors = {}
-        Object.keys(formData).forEach(field=> {
+        Object.keys(formData).forEach(field => {
             if (formData[field].trim() === '') {
-                newErrors[field] = `This field is required`
+                newErrors[field] = `${field} field is required`
             }
         })
 
@@ -77,19 +79,18 @@ const  ContactForm = () => {
             return
         }
 
-        if (validateForm()) {
-          console.log('form valid')
-        } 
-        else {
+        if (!validateForm()) {
           console.log('form Invalid')
-        }
+          return;
+        } 
+       
         
         const res = await axios.post('https://win24-assignment.azurewebsites.net/api/forms/contact', formData)
       
 
       console.log(res.status)
 
-      if (!res.status === 200) {
+      if (res.status !== 200) {
         console.log(res.data)
       } else {
         setSubmitted(true)
@@ -140,7 +141,7 @@ const  ContactForm = () => {
               <option value="option2">Economy</option>
               <option value="option3">Construction</option>
             </select>
-            <span className="error">{errors.email && errors.email}</span>
+            <span className="error">{errors.specialist && errors.specialist}</span>
                               
 
           </div>
